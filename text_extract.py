@@ -5,6 +5,10 @@ Created on Sun Dec 20 23:49:18 2015
 @author: Jorge
 """
 
+#TODO
+#The flow is working, but the results are only shown on screen.
+#need to save to db or text and inject to solr
+
 import os
 import tika
 from tika import parser
@@ -29,13 +33,15 @@ def textExtract(filename):
     # title = (parsed["metadata"]["title"])
     # contentType = (parsed["metadata"]["Content-Type"])
     content = (parsed["content"])
-    return metadata
+    return parsed
 
 def iterdir():
     for i in range(len(file_list)):
         try:
             newDoc = textExtract(file_list[i])
-            print (newDoc)
+            #print (newDoc["metadata"])  #works to call just metadata
+            #print (newDoc["content"])  #works to call just content in pretty print
+            print (newDoc)              # to call everythin on the parsed doc in json format
             # textExtract(file_list[i])
             # print ('done ' + file_list[i])
         except:
