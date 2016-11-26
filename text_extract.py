@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Dec 20 23:49:18 2015
-
-@author: Jorge
+Converts rich files to json using Apache Tika. Instructions:
+1) Modify the configurations to suit your folder structure
+2) Run $ python text_extract.py
 """
-
-#TODO
 
 import os
 import tika
 from tika import parser
 
-#configurations
+###### configurations
 tika_server = 'http://localhost:9998/tika'
 original_files = './original_files/'
 json_files = './json_files/'
-renamed_files = './renamed_files'
-
-
-#cleaning filename, remove spaces
-def rem_space(filename):
-    return '_'.join(filename.split())
+######
 
 #text extraction function
 def textExtract(filename):
@@ -62,5 +55,4 @@ def iterdir(source , destination, function):
 #print textExtract('tika_tutorial.pdf')["metadata"]
 
 #run-it       
-iterdir(original_files , json_files, textExtract) #this will extract text from files
-#iterdir(original_files , renamed_files, rem_space) #this will extract text from files
+iterdir(original_files , json_files, textExtract) #this will initiate the iteration
