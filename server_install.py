@@ -36,6 +36,6 @@ print dir
 count=0
 for cmd in cmds:
     count+=1
-    print "____Running Command Number : ",count , " $" , cmd
+    print ("____Running Command Number : ",count , " $" , cmd)
     subprocess.call(cmd, shell=True)
-    print "____Finished Running Command: $" , cmd
+    print ("____Finished Running Command: $" , cmd)
