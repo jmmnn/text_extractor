@@ -13,7 +13,7 @@ import os
 UPDATE ="sudo apt-get update"
 GIT = "sudo apt-get install git"
 PIP = "sudo apt-get install python-pip"
-JAVA = "sudo apt-get install openjdk-7-jre"
+JAVA = "sudo apt-get install default-jre"
 CLONE_REPO = "git clone https://github.com/jmmnn/text_extractor.git"
 
 #######  Python stuff

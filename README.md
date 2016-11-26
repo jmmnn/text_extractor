@@ -9,10 +9,12 @@ Instructions
 
 1 - Obtain a new Ubuntu server [e.g. c9.io (free), VirtualBox, AWS, Godaddy cloud, etc.]  
 2 - Copy the installer script to the server:  
-`$ wget https://raw.githubusercontent.com/jmmnn/text_extractor/master/server_install.py`
+`$ wget https://raw.githubusercontent.com/jmmnn/text_extractor/master/server_install.py`  
 3 - Run the istaller, click yes when necessary:  
-`$ python server_install.py`  
-At this point you have what you need.
+`$ python3 server_install.py`  #in Ubuntu 14 you can do just python, but  
+in Ubuntu 16 only python3 is installed by default.
+
+At this point you have all you need!
 
 
 If you want to test it:  
@@ -23,3 +25,4 @@ If you want to test it:
 
 
 To run, just place your files in the "original_files" folder and run the command above again.
+(You can do this by sftp to your server, or getting the files using wget)
